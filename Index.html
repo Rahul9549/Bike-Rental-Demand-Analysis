@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Sharing Demand Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark gray text */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #007bff; /* Blue heading */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        label {
+            font-weight: bold;
+            color: #555; /* Dark gray label text */
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; /* Blue button background */
+            color: #fff; /* White button text */
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Bike Rental Demand Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="season">Season:</label>
+        <select name="season" id="season">
+            <option value="1">Springer</option>
+            <option value="2">Summer</option>
+            <option value="0">Fall</option>
+            <option value="3">Winter</option>
+        </select><br><br>
+        <label for="hr">Hour of the Day (1-23):</label>
+        <input type="number" name="hr" id="hr" min="1" max="23" value="1"><br><br>
+        <label for="workingday">Working Day:</label>
+        <select name="workingday" id="workingday">
+            <option value="0">No Work</option>
+            <option value="1">Working Day</option>
+        </select><br><br>
+        <label for="weathersit">Weather Situation:</label>
+        <select name="weathersit" id="weathersit">
+            <option value="0">Clear</option>
+            <option value="3">Mist</option>
+            <option value="2">Light Snow</option>
+            <option value="1">Heavy Rain</option>
+        </select><br><br>
+        <label for="temp">Temperature (°C):</label>
+        <input type="number" name="temp" id="temp" min="-20" max="40" value="20"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
+
