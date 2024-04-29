@@ -27,5 +27,4 @@
 #### A. Deploy the selected model using Flask to create a web application.
 #### B. Provide an intuitive interface for users to input parameters and obtain bike rental demand forecasts.
 
-#### The files App.py , Index.html and Result.html are use for Model Deployment in conjuction with the saved Model and Scaler. The PDF
-#### file shows the webpage after Model Deployment where the user can provide input and Click on Predict to get the number of Bike Rental Demand.     
+#### The files App.py , Index.html and Result.html are use for Model Deployment in conjuction with the saved Model and Scaler. The PDF file shows the webpage after Model Deployment where the user can provide input and Click on Predict to get the number of Bike Rental Demand.     
